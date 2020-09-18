@@ -8,6 +8,7 @@ import {CrouselComponent} from "./shared/crousel/crousel.component";
 import { HeaderComponent } from './shared/header/header.component';
 import { LoaderComponent } from './shared/loader/loader.component';
 import { AppRoutingModule } from './app.routing';
+import { NavbarComponent } from './shared/navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { AppRoutingModule } from './app.routing';
     HomeComponent,
     CrouselComponent,
     HeaderComponent,
-    LoaderComponent
+    LoaderComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,

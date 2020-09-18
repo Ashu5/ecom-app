@@ -1,0 +1,14 @@
+[
+    {
+        "categoryId" : "1",
+        "categoryName" : "electronics",
+        "categoryDetails" : "electronics"
+        
+    },
+    {
+        "categoryId" : "2",
+        "categoryName" : "appliances",
+        "categoryDetails" : "appliances"
+        
+    }
+]

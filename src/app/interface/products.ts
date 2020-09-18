@@ -7,8 +7,6 @@ export interface Products {
     ProductPicUrl: string;
     Quantity: number;
     Status: string;
-    WeightMeasure: Float32Array;
-    WeightUnit: string;
     deliveryPrice: number;
-    _id: string;
+    id: string;
 }

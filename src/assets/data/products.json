@@ -1,0 +1,43 @@
+[
+    {
+        "Category": "Electronics",
+        "CurrencyCode":"INR",
+        "Description":"Laptop",
+        "Name":"Macbook Air",
+        "Price":"70,000",
+        "ProductPicUrl":"",
+        "Quantity": 10,
+        "Status": "Available",
+        "deliveryPrice":"68999",
+        "id": "1"
+      }
+
+    ,
+    
+    {
+        "Category": "Electronics",
+        "CurrencyCode":"INR",
+        "Description":"Laptop",
+        "Name":"Asus Zenbook 14",
+        "Price":"65,000",
+        "ProductPicUrl":"",
+        "Quantity": 10,
+        "Status": "Available",
+        "deliveryPrice":"58000",
+        "id": "2"
+      },
+      
+    {
+        "Category": "Electronics",
+        "CurrencyCode":"INR",
+        "Description":"Laptop",
+        "Name":"Lenovo Thinkpad T490",
+        "Price":"1,20000",
+        "ProductPicUrl":"",
+        "Quantity": 10,
+        "Status": "Available",
+        "deliveryPrice":"108999",
+        "id": "3"
+      }
+
+]
