@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductService } from 'src/app/services/product.service';
 
 @Component({
   selector: 'app-cart-controller',
@@ -6,10 +7,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cart-controller.component.css']
 })
 export class CartControllerComponent implements OnInit {
-
-  constructor() { }
+cartProducts:any[]=[];
+  constructor(private productService:ProductService) { }
 
   ngOnInit(): void {
   }
 
+  removeCartProduct(product) {
+    this.productService.removeLocalCartProduct(product);
+
+    // Recalling
+    this.getCartProduct();
+  }
+
+  getCartProduct() {
+    this.cartProducts = this.productService.getLocalCartProducts();
+  }
 }

@@ -1,5 +1,7 @@
+import { compileComponentFromMetadata } from '@angular/compiler';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { CartControllerComponent } from './components/cart-controller/cart-controller.component';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { ProductsComponent } from './components/products/products.component';
@@ -22,7 +24,12 @@ const appRoutes: Routes = [
     {
     path:"products",
     component:ProductsComponent
+    },
+    {
+    path:"cart",
+    component:CartControllerComponent
     }
+    
 ];
     @NgModule({
         imports: [RouterModule.forRoot(appRoutes)],
