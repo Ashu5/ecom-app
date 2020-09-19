@@ -5,7 +5,8 @@ ul {
 }
 
 .rating {
-    margin-left: 37%
+    margin-left: 37%;
+    display:inline;
 }
 
 .page {
@@ -30,14 +31,13 @@ ul {
 }
 
 .card {
-    width: 95%;
+    width: 90%;
     padding: 0px;
     margin-left: 2%
 }
 
 .card-footer {
-    background-color: #ff772e;
-    font-weight: 700
+    font-weight: 700;
 }
 
 .price {

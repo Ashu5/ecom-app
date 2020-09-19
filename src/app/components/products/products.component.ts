@@ -12,7 +12,12 @@ productList;
 
   ngOnInit(): void {
     this.productService.getProduct().subscribe(res=>this.productList=res);
-    console.log("product data",this.productList);
+    
+  }
+
+  addToCart(product) {
+    
+    this.productService.addToCart(product);
   }
 
 }

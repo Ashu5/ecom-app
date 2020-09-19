@@ -15,16 +15,16 @@
                   <h4 class="card-title"><strong><a href="">{{product.productName}}</a></strong></h4> <!-- Card Description-->
                   <p class="card-text">{{product.productDescription}} </p>
                   <p class="price">{{product.productPrice| currency:'INR'}}</p> <!-- Card Rating-->
-                  <ul class="row rating">
-                      <li><i class="fa fa-star"></i></li>
-                      <li><i class="fa fa-star"></i></li>
-                      <li><i class="fa fa-star"></i></li>
-                      <li><i class="fa fa-star"></i></li>
-                      <li><i class="fa fa-star"></i></li>
+                  <ul class="row rating list-inline" >
+                      <li  ><i class="glyphicon glyphicon-star"></i></li>
+                      <li ><i class="glyphicon glyphicon-star"></i></li>
+                      <li ><i class="glyphicon glyphicon-star"></i></li>
+                      
                   </ul>
                   <!--Card footer-->
                   <div class="card-footer">
-                      <p>ADD TO CART</p>
+                    <a placement="top"  (click)="addToCart(product)"> <i class="glyphicon glyphicon-shopping-cart"></i> </a>&nbsp;
+                    <a placement="top"  (click)="addToCart(product)"> <i class="glyphicon glyphicon-heart"></i> </a>
                   </div>
               </div>
           </div>
