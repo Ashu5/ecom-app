@@ -23,6 +23,7 @@ import { NavbarComponent } from './shared/navbar/navbar.component';
   imports: [
     BrowserModule,
     AppRoutingModule
+  
   ],
   providers: [],
   bootstrap: [AppComponent]
