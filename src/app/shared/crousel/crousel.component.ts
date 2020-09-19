@@ -13,22 +13,7 @@ export class CrouselComponent implements OnInit {
 
   }
 
-  crouselData=[
-
-    {
-      title:' 1',
-      Description:'Mumbai is hub of startups',
-      img: 'https://picsum.photos/900/500?random&t=8'
-      
-    },
-    {
-      title:' 1',
-      Description:'Mumbai is hub of startups',
-      img: 'https://picsum.photos/900/500?random&t=8'
-    }
-  ];
-
-
+ 
   
 
 }
