@@ -1,4 +1,8 @@
 .carousel-inner {
   
-  width: 92%;
+  width: 100%;
+  position: relative;
+}
+.col-md-10 {
+  width: 100%;
 }
