@@ -8,7 +8,7 @@ import { ProductService } from 'src/app/services/product.service';
   styleUrls: ['./cart-controller.component.css']
 })
 export class CartControllerComponent implements OnInit {
-cartProducts:Product[]=[];
+cartProducts:Product[];
 //items:Product[];
   constructor(private productService:ProductService) { }
 
@@ -16,11 +16,11 @@ cartProducts:Product[]=[];
    this.getCartProduct();
   }
 
-  removeCartProduct(product) {
+  removeCartProduct(product:Product) {
     this.productService.removeLocalCartProduct(product);
 
     // Recalling
-    //this.getCartProduct();
+    this.getCartProduct();
   }
 
   getCartProduct() {

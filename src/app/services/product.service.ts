@@ -31,10 +31,11 @@ export class ProductService {
   removeLocalCartProduct(product: Product) {
     const products = JSON.parse(localStorage.getItem("cartData"));
 
-
+  console.log("product._id",product._id);
+  console.log("product._id",products[0]._id);
     for (let i = 0; i < products.length; i++) {
 
-      if (product[i]._id == products[i]._id) {
+      if (product._id == products[i]._id) {
         products.splice(i, 1);
         console.log("spliced", products);
       }
