@@ -43,7 +43,7 @@ export class ProductService {
   getLocalCartProducts(): [] {
     const products: [] =
       JSON.parse(localStorage.getItem("cartData")) || [];
-    console.log("cart item coun", products.length);
+     console.log("Product Service Product Length", products.length);
     return products;
   }
 

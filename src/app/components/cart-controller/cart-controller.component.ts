@@ -8,19 +8,26 @@ import { ProductService } from 'src/app/services/product.service';
 })
 export class CartControllerComponent implements OnInit {
 cartProducts:any[]=[];
+items={};
   constructor(private productService:ProductService) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.items= this.productService.getLocalCartProducts();
+    if(this.items[0]!=null)
+    this.cartProducts.push(this.items);
+    console.log("CartProduct Length",this.cartProducts.length);
   }
 
   removeCartProduct(product) {
     this.productService.removeLocalCartProduct(product);
 
     // Recalling
-    this.getCartProduct();
+    //this.getCartProduct();
   }
 
-  getCartProduct() {
-    this.cartProducts = this.productService.getLocalCartProducts();
-  }
+  // getCartProduct() {
+  //   this.cartProducts.push(this.productService.getLocalCartProducts());
+  //   console.log("TEST",this.cartProducts);
+    
+  // }
 }

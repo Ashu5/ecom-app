@@ -1,81 +1,69 @@
-<div class="container" *ngIf="cartProducts.length >= 0">
-    <div class="row">
-      <!-- List of Products -->
-      <div class="col-8">
-        <div class="row">
-          <div class="col-4" *ngFor="let product of cartProducts">
-            <div class="item">
-              <div class="mb-r">
-                <!--Card-->
-                <div class="card card-cascade wider">
-                  <!--Card image-->
-                  <a [routerLink]="['/products/product', product.$key]">
-                    <div class="view overlay hm-white-slight">
-                      <img
-                        [src]="product.productURL"
-                        class="img-fluid"
-                        alt=""
-                        width="360px"
-                        height="640px"
-                      />
-                      <a>
-                        <div
-                          class="mask waves-effect waves-light"
-                          mdbRippleRadius
-                        ></div>
-                      </a>
-                    </div>
-                  </a>
-  
-                  <!--/.Card image-->
-  
-                  <!--Card content-->
-                  <div class="card-body text-center no-padding">
-                    <!--Category & Title-->
-                    <a class="text-muted">
-                      <h5>{{ product.productCategory }}</h5>
-                    </a>
-                    <h5 class="card-title">
-                      <strong>
-                        <a [routerLink]="['/products/product', product.$key]">{{
-                          product.productName
-                        }}</a>
-                      </strong>
-                    </h5>
-  
-                    <!--Description-->
-                    <p class="card-text">{{ product.productDescription }}</p>
-  
-                    <!--Card footer-->
-                    <div class="card-footer">
-                      <span class="left">₹ {{ product.productPrice }}</span>
-                      <span class="right">
-                        <a
-                          placement="top"
-                          mdbTooltip="Quick Look"
-                          container="body"
-                          [routerLink]="['/products/product', product.$key]"
-                        >
-                          <i class="fa fa-eye"></i>
-                        </a>
-                        <a
-                          placement="top"
-                          mdbTooltip="Remove Product"
-                          container="body"
-                          (click)="removeCartProduct(product)"
-                        >
-                          <i class="fa fa-trash"></i>
-                        </a>
-                      </span>
-                    </div>
-                  </div>
-                  <!--/.Card content-->
-                </div>
-                <!--/.Card-->
-              </div>
-            </div>
-          </div>
-        </div>
-        <app-cart-value [products]="cartProducts"></app-cart-value>
-      </div>
+<div class="container" >
+    <div class="row" *ngIf="cartProducts.length > 0">
 
+        <div class="col-8">
+            <div class="row" >
+
+                <div class="col-4" *ngFor="let product of cartProducts; index as i;">
+                    <div class="card card-cascade card-ecommerce wider shadow mb-5 ">
+                        <!--Card image-->
+                        <div class="view view-cascade overlay text-center"> <img class="card-img-top"[src]="product[i].productURL" alt="" width="200px"
+                            height="200px"> <a>
+                                <div class="mask rgba-white-slight"></div>
+                            </a> </div>
+                        <!--Card Body-->
+                        <div class="card-body text-center no-padding">
+                            <!--Card Title-->
+                            <h4 class="card-title"><strong><a href="">{{product[i].productName}}</a></strong></h4> <!-- Card Description-->
+                            <p class="card-text">{{product[i].productDescription}} </p>
+                            <p class="price">{{product[i].productPrice| currency:'INR'}}</p>
+                             <!-- Card Rating-->
+                             <span class="right">
+                                <a
+                                  placement="top"
+                                  data-toggle="tooltip" title="Click to View"
+                                  container="body"
+                                  [routerLink]="['/product', product.$_id]"
+                                >
+                                  <i class="glyphicon glyphicon-eye-open"></i>
+                                </a>&nbsp;
+                                <a
+                                  placement="top"
+                                  data-toggle="tooltip" title="Remove!"
+                                  container="body"
+                                  (click)="removeCartProduct(product)"
+                                >
+                                  <i class="glyphicon glyphicon-trash"></i>
+                                </a>
+                              </span>
+                            
+                          
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="col-4">
+            <app-cart-value [products]="cartProducts"></app-cart-value>
+
+        </div>
+        
+
+
+    </div>
+
+
+    <!--No Product Details-->
+<div class="jumbotron" *ngIf="cartProducts.length === 0 ">
+    <span class="text-center">
+        <h3> No items in the Cart. Go to <a class="text-center btn btn-primary btn-lg" [routerLink]="['/products']" >Shopping</a></h3>
+        
+    </span>
+    
+     
+</div>
+
+</div>

@@ -1,0 +1,19 @@
+
+.cart-text{
+    line-height: 20px;
+    height: 60px;
+    overflow: hidden;
+}
+p{
+    
+        margin-top: 0;
+        margin-bottom: 1rem;
+}
+.card-body{
+    padding-top: 1.8rem;
+    width: 189px;
+    text-align: center;
+}
+.view{
+    text-align: justify;
+}

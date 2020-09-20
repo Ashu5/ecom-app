@@ -16,9 +16,10 @@ totalAmount=0;
     const dataChanges: SimpleChange = changes.products;
 
     const products:any[] = dataChanges.currentValue;
-    this.totalAmount = 0;
+    this.totalAmount=0;
     products.forEach((product) => {
       this.totalAmount += product.productPrice;
+      console.log("totalAmount",this.totalAmount);
     });
 
     console.log("products in cartValue",this.products);
