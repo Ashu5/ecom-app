@@ -36,6 +36,8 @@ export class ProductService {
         break;
       }
     }
+
+    this.getLocalCartProducts();
     // ReAdding the products after remove
     localStorage.setItem("cartData", JSON.stringify(products));
   }
