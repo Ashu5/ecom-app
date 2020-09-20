@@ -1,19 +1,20 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Product } from '../interface/Product';
 import { ToastService } from './toast.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductService {
-  cartData: any[] = [];
-  constructor(private http: HttpClient,private toastService:ToastService) { }
+  cartData: Product[] = [];
+  constructor(private http: HttpClient, private toastService: ToastService) { }
 
   getProduct() {
     return this.http.get('../../../assets/products/product.json');
   }
 
-  addToCart(product) {
+  addToCart(product: Product) {
 
     this.cartData.push(product);
     console.log("cartValues", this.cartData);
@@ -22,30 +23,34 @@ export class ProductService {
     //   "Product Adding to Cart"
     // );
     // setTimeout(()=>{
-     
+
     // },300);
     localStorage.setItem("cartData", JSON.stringify(this.cartData));
   }
 
-  removeLocalCartProduct(product) {
+  removeLocalCartProduct(product: Product) {
     const products = JSON.parse(localStorage.getItem("cartData"));
 
+
     for (let i = 0; i < products.length; i++) {
-      if (products[i]._Id === product._Id) {
+
+      if (product[i]._id == products[i]._id) {
         products.splice(i, 1);
-        break;
+        console.log("spliced", products);
       }
+      break;
+
     }
 
-    this.getLocalCartProducts();
+
     // ReAdding the products after remove
     localStorage.setItem("cartData", JSON.stringify(products));
   }
 
-  getLocalCartProducts(): [] {
-    const products: [] =
+  getLocalCartProducts(): Product[] {
+    const products: Product[] =
       JSON.parse(localStorage.getItem("cartData")) || [];
-     console.log("Product Service Product Length", products.length);
+    console.log("Product Service Product Length", products.length);
     return products;
   }
 

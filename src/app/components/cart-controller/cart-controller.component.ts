@@ -25,9 +25,9 @@ items={};
     //this.getCartProduct();
   }
 
-  // getCartProduct() {
-  //   this.cartProducts.push(this.productService.getLocalCartProducts());
+  getCartProduct() {
+    this.cartProducts.push(this.productService.getLocalCartProducts());
   //   console.log("TEST",this.cartProducts);
     
-  // }
+   }
 }
