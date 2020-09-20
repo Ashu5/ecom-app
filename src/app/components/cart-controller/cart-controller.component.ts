@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Product } from 'src/app/interface/Product';
 import { ProductService } from 'src/app/services/product.service';
 
 @Component({
@@ -7,15 +8,12 @@ import { ProductService } from 'src/app/services/product.service';
   styleUrls: ['./cart-controller.component.css']
 })
 export class CartControllerComponent implements OnInit {
-cartProducts:any[]=[];
-items={};
+cartProducts:Product[]=[];
+//items:Product[];
   constructor(private productService:ProductService) { }
 
   ngOnInit() {
-    this.items= this.productService.getLocalCartProducts();
-    if(this.items[0]!=null)
-    this.cartProducts.push(this.items);
-    console.log("CartProduct Length",this.cartProducts.length);
+   this.getCartProduct();
   }
 
   removeCartProduct(product) {
@@ -26,7 +24,7 @@ items={};
   }
 
   getCartProduct() {
-    this.cartProducts.push(this.productService.getLocalCartProducts());
+   this.cartProducts=this.productService.getLocalCartProducts();
   //   console.log("TEST",this.cartProducts);
     
    }

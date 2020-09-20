@@ -17,3 +17,6 @@ p{
 .view{
     text-align: justify;
 }
+a{
+    text-decoration: none;
+}
