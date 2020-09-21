@@ -1,5 +1,6 @@
+{
 
-[
+"products":[
   {
     "_id": 1,
     "productName": "Realme C2",
@@ -60,3 +61,5 @@
     "quantity": 10
   }
 ]
+
+}
