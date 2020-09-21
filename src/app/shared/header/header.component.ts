@@ -14,7 +14,7 @@ export class HeaderComponent implements OnInit {
   users={};
   constructor(private userService:UserService
     ,public productService:ProductService){
-    this.userService.getUser().subscribe(data=>{
+    this.userService.getUser("").subscribe(data=>{
       console.log("data",data);
       this.users=data;
 

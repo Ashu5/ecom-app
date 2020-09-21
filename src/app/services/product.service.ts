@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { environment } from 'src/environments/environment';
 import { Product } from '../interface/Product';
 import { ToastService } from './toast.service';
 
@@ -11,7 +12,9 @@ export class ProductService {
   constructor(private http: HttpClient, private toastService: ToastService) { }
 
   getProduct() {
-    return this.http.get('../../../assets/products/product.json');
+    console.log("Product JSON",environment.product);
+    return this.http.get(environment.product);
+
   }
 
   addToCart(product: Product) {
@@ -51,7 +54,7 @@ export class ProductService {
   getLocalCartProducts(): Product[] {
     const products: Product[] =
       JSON.parse(localStorage.getItem("cartData")) || [];
-    console.log("Product Service Product Length", products.length);
+    
     return products;
   }
 

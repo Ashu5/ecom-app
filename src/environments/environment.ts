@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  baseURL:"https://jsonplaceholder.typicode.com/users"
+  baseURL:"https://jsonplaceholder.typicode.com/users/",
+  product:"http://my-json-server.typicode.com/Ashu5/ecom-app/products/"
 };
 
 /*

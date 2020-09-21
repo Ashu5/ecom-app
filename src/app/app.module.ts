@@ -13,7 +13,8 @@ import { FormComponent } from './components/form/form.component';
 import { CartControllerComponent } from './components/cart-controller/cart-controller.component';
 import { ProductsComponent } from './components/products/products.component';
 import { CartValueComponent } from './components/cart-value/cart-value.component';
-
+import { FormsModule ,ReactiveFormsModule }   from '@angular/forms';
+import { RegisterComponent } from './components/register/register.component';
 
 @NgModule({
   declarations: [
@@ -27,12 +28,15 @@ import { CartValueComponent } from './components/cart-value/cart-value.component
     FormComponent,
     CartControllerComponent,
     ProductsComponent,
-    CartValueComponent
+    CartValueComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule 
   
   ],
   providers: [],

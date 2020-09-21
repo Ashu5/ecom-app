@@ -14,7 +14,8 @@ users={};
 
 
 
-public getUser(){
-  return this.http.get(environment.baseURL);
+public getUser(userId:string){
+  
+  return this.http.get(environment.baseURL+userId);
 }
 }
