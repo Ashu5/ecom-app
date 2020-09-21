@@ -1,1 +1,62 @@
 
+[
+  {
+    "_id": 1,
+    "productName": "Realme C2",
+    "productCategory": "Electronics",
+    "productPrice": 8000,
+    "productRating":4,
+    "productURL":"https://i.ibb.co/vsNh8QJ/realme-2.jpg",
+    "productDescription": "Dual SIM; GPS; Music Player; Video Player"
+  },
+  {
+    "_id": 1,
+    "productName": "iPhone7",
+    "productCategory": "Electronics",
+    "productPrice":58000,
+    "productRating":4,
+    "productURL":"https://i.ibb.co/SXQ6tRR/iphone.jpg",
+    "productDescription": " 6.1-inch (15.5 cm) Liquid Retina HD LCD display",
+    "quantity": 10
+  },
+  {
+    "_id": 1,
+    "productName": "Moto G6-2",
+    "productCategory": "Electronics",
+    "productPrice": 20000,
+    "productRating":4,
+    "productURL":"https://i.ibb.co/xsXWkj7/moto-g6-2.jpg",
+    "productDescription": "Camera: 12+5 MP Dual rear cameras",
+    "quantity": 10
+  },
+  {
+    "_id": 1,
+    "productName": "Redme Note9 Pro",
+    "productCategory": "Electronics",
+    "productPrice": 13999,
+    "productRating":4,
+    "productURL":"https://i.ibb.co/7rNKdTr/redme-note9.jpg",
+    "productDescription": "48MP rear camera with ultra-wide, super macro, ",
+    "quantity": 10
+  },
+  {
+    "_id": 1,
+    "productName": "OnePlus 7T",
+    "productCategory": "Electronics",
+    "productPrice": 37999,
+    "productRating":4,
+    "productURL":"https://i.ibb.co/cLtFCqg/oneplus7t.jpg",
+    "productDescription": "Fluid AMOLED Display, 256GB Storage, 3800mAH Battery",
+    "quantity": 10
+  },
+  {
+    "_id": 1,
+    "productName": "Samsung M31",
+    "productCategory": "Electronics",
+    "productPrice": 16399,
+    "productRating":4,
+    "productURL":"https://i.ibb.co/rcdVg17/m31.jpg",
+    "productDescription": "Quad Camera Setup - 64MP (F1.8) Main Camera +8MP",
+    "quantity": 10
+  }
+]
